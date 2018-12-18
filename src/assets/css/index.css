@@ -1,0 +1,334 @@
+@charset "UTF-8";
+@import '~antd/dist/antd.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* 重置样式 */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+    color: #000;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%;
+}
+/* IE6对positon:fixed的单独处理修正IE6滚动抖动的bug */
+*html,*html body{
+    /* background-image:url(about:blank);/*修正IE6滚动抖动的bug*/ */
+    background-attachment: fixed;/*根据自己实际，非必需*/
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,li,pre,form,fieldset,select,input,textarea,button,p,blockquote,th,td,img,iframe{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+    font: 12px/1.5 "微软雅黑","Microsoft YaHei","\5b8b\4f53","Tahoma","Arial";
+    color: #333;
+    outline: none;
+}
+input,select,textarea{
+    font-size: 100%;
+}
+/* 重置button边框 */
+button{
+    border: none;
+}
+/* 去掉各Table cell 的边距并让其边重合 */
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th{
+    text-align: inherit;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th{
+    text-align: left;
+}
+/* 去除默认边框 */
+fieldset,img{
+    border: none;
+    outline: none;
+    -moz-outline:none;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+    display: block;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,ul,li{
+    list-style: none;
+}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+/* 让链接默认不显示下划线，在hover状态下显示下划线 */
+a{
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    blr:expression(this.onFocus=this.blur());
+}
+a:hover{
+    text-decoration: underline;
+}
+/* 清理浮动 */
+.clearfix:before,.clearfix:after{
+    display: block;
+    content: " ";
+    clear: both;
+}
+.clearfix{
+    zoom: 1; /* for ie67*/
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+address,caption,cite,code,dfn,em,th{
+    font-style: normal;
+    font-weight: normal;
+}
+/*解决盒模型问题css3属性也可用来统一FORM元素风格*/
+.box-sizing{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 外部引用复制 */
+/*列表*/
+.item{
+  font-size: 20px;
+  font-weight: bold;
+}
+.item .item_cate {
+  text-align: center;
+  padding: .5rem; }
+.item .item_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px .5rem; }
+  .item .item_list li {
+    width: 33.3%;
+    padding: .5rem;
+    box-sizing: border-box; }
+
+
+    .item .item_list li a{
+
+      text-decoration: none;
+
+      color:#555;
+    }
+
+    .item .item_list li .inner {
+      background: #fff;
+      width: 100%;
+      border-radius: .5rem;
+      overflow: hidden; }
+      .item .item_list li .inner img {
+        width: 100%; }
+      .item .item_list li .inner p {
+        padding: .2rem .5rem; }
+      .item .item_list li .inner .title {
+        font-weight: bold; }
+
+
+
+.price{
+  color:red;
+}
+
+
+
+/*详情*/
+.back {
+  height: 3.8rem;
+  line-height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  }
+  .back a{
+
+    color: #fff;
+
+    text-decoration: none;
+  }
+
+
+  .back:before {
+    content: "";
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    border-left: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+    float: left;
+    position: relative;
+    top: 1.3rem;
+    left: .6rem;
+    transform: rotate(45deg);
+    margin-right: .4rem; }
+
+.p_content .p_info {
+  background: #fff; }
+  .p_content .p_info img {
+    width: 100%;
+    height: 18rem; }
+  .p_content .p_info h2 {
+    padding: .2rem .5rem; }
+  .p_content .p_info .price {
+    padding: .2rem .5rem;
+    color: red; }
+.p_content .p_detial {
+  background: #fff;
+  margin-top: 1rem; }
+  .p_content .p_detial h3 {
+    padding: .5rem; }
+  .p_content .p_detial .p_content {
+    padding: 1rem; }
+    .p_content .p_detial .p_content img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto; }
+    .p_content .p_detial .p_content * {
+      line-height: 1.5;
+      color: #666; }
+
+/*详情*/
+
+.back {
+  height: 3.8rem;
+  line-height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  color: #fff; }
+  .back:before {
+    content: "";
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    border-left: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+    float: left;
+    position: relative;
+    top: 1.3rem;
+    left: .6rem;
+    transform: rotate(45deg);
+    margin-right: .4rem; }
+
+.p_content .p_info {
+  background: #fff; }
+  .p_content .p_info img {
+    width: 100%;
+    height: 18rem; }
+  .p_content .p_info h2 {
+    padding: .2rem .5rem; }
+  .p_content .p_info .price {
+    padding: .2rem .5rem;
+    color: red; }
+.p_content .p_detial {
+  background: #fff;
+  margin-top: 1rem; }
+  .p_content .p_detial h3 {
+    padding: .5rem; }
+  .p_content .p_detial .p_content {
+    padding: 1rem; }
+    .p_content .p_detial .p_content img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto; }
+    .p_content .p_detial .p_content * {
+      line-height: 1.5;
+      color: #666; }
+
+.pfooter {
+  position: absolute;
+  bottom: 0px;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  background: #fff;
+  left: 0px;
+  width: 100%;
+  border-top: 1px solid #eee; }
+  .pfooter .cart {
+    float: left;
+    display: flex; }
+    .pfooter .cart strong {
+      flex: 1;
+      font-size: 1.6rem;
+      padding: 0rem .5rem; }
+    .pfooter .cart .cart_num {
+      width: 10rem;
+      display: flex;
+      margin-top: .8rem; }
+      .pfooter .cart .cart_num .input_left, .pfooter .cart .cart_num .input_right {
+        flex: 1;
+        width: 2.8rem;
+        height: 2.8rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: red;
+        border: 1px solid #eee;
+        font-size: 2.4rem; }
+      .pfooter .cart .cart_num .input_center {
+        flex: 1; }
+        .pfooter .cart .cart_num .input_center input {
+          width: 2rem;
+          text-align: center;
+          width: 100%;
+          height: 2.8rem;
+          border: none;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          float: left; }
+  .pfooter .addcart {
+    float: right;
+    background: red;
+    color: #fff;
+    height: 3rem;
+    border: none;
+    padding: 0 .5rem;
+    border-radius: .5rem;
+    margin-top: .8rem;
+    margin-right: .5rem; }

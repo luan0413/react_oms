@@ -1,0 +1,174 @@
+.App {
+  /* text-align: center; */
+}
+/* 头部 start */
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+  height: 60px;
+}
+.App-header-logo{
+  width: 100px;
+  float: left;
+}
+.App-header-logo img.App-logo{
+  height: 56px;
+  animation: App-logo-spin infinite 20s linear;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.App-header-menu{
+  /* width: 240px; */
+  /* float: right; */
+}
+.App-header .App-header-menu a{
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  padding: 0 20px;
+  line-height: 60px;
+}
+/* 头部 end */
+
+/* 头部导航切换组件 */
+.Equipment{
+  min-height: 90vh;
+  background: #fee;
+}
+.Facility{
+  min-height: 90vh;
+  background: #efe;
+}
+.Police{
+  min-height: 90vh;
+  background: #eef;
+}
+.Monitor{
+  min-height: 90vh;
+  background: #fee;
+}
+.System{
+  min-height: 90vh;
+  background: #fef;
+}
+/* 左侧菜单 */
+.leftMenu{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background: #fff;
+}
+/*内容区*/
+.content{
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  bottom: 0;
+  right: 0;
+  background: #ebeef3;
+  padding: 20px;
+}
+/* 信号设备维护 */
+.main .searchBox{
+  min-height: 60px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: auto;
+}
+.main .searchBox li{
+  width: 25%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .searchBox .searchList{
+  float: left;
+  padding-left: 10px;
+}
+.main .searchBox .searchList label{
+  color: #323232;
+  padding-right: 5px;
+}
+.main .searchBox .searchList input{
+  max-width: 180px;
+}
+.main .searchBox .searchBtn{
+  float: right;
+}
+.main .btnBox{
+  margin-top: 10px;
+}
+.main .gridBox{
+  margin-top: 10px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* 设备 */
+.infoBox{
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.infoBox .infoBoxTitle{
+  background: #fff;
+  width: auto;
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  padding: 3px 6px;
+  height: 24px;
+}
+/* antd样式重置 */
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+  padding: 5px 16px;
+}
+/* 登录页面 */
+.loginBox{
+  width: 400px;
+  background: #fff;
+  height: 240px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: absolute;
+  right: 100px;
+  bottom: 50%;
+  margin-bottom: -120px;
+  text-align: center;
+  background: #409eff;
+}
+.loginBox .text{
+  width: 300px;
+  height: 36px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.loginBox .btn{
+  width: 300px;
+  height: 36px;
+  outline: none;
+  border: 1px solid #409eff;
+  border-radius: 3px;
+  background: #409eff;
+  color: #fff;
+}
